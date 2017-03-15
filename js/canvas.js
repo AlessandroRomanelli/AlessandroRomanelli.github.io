@@ -3,15 +3,14 @@
   var canvasWidth = $("canvas").width();
   var canvasHeight = $("canvas").height();
   var color;
-  var i = 0;
+  var count = 0;
 
   var circleR = canvasWidth/2;
   var timeout = 0;
-  var often;
+  var often = .01;
 
   function init(){
   	if (location.hash)
-		often = 2.5;
   	canvas = document.getElementById("canvas");
   	ctx = canvas.getContext("2d");
   	drawLines();
@@ -23,18 +22,17 @@
     	ctx.translate(canvasWidth/2,canvasHeight/2);
     	for (var i = 0; i < 25; i++) {
     		for (var a = -45; a <= 45; a+=often) {
-    			setTimeout("drawTimeout("+a+");",25 * timeout);
+    			setTimeout("drawTimeout("+a+");",1 * timeout);
     			timeout++;
     		}
     	}
     }
 
   function changeColor(width, center, freq, phase1, phase2, phase3) {
-    var r = Math.floor(Math.sin(freq*i+phase1)*width+center);
-    var g = Math.floor(Math.sin(freq*i+phase2)*width+center);
-    var b = Math.floor(Math.sin(freq*i+phase3)*width+center);
-    i++;
-    console.log("rgb("+r+", "+g+", "+b+")");
+    var r = Math.floor(Math.sin(freq*count+phase1)*width+center);
+    var g = Math.floor(Math.sin(freq*count+phase2)*width+center);
+    var b = Math.floor(Math.sin(freq*count+phase3)*width+center);
+    count++;
     return "rgb("+r+", "+g+", "+b+")";
   }
 

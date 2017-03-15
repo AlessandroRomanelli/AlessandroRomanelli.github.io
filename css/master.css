@@ -71,22 +71,6 @@ canvas {
   transform: translate(-50%, -50%);
   text-align: center;
   cursor: default;
-  text-shadow: 5px 5px 0 #181818,
-               7px 7px 5px #181818,
-               5px 0 0 #181818,
-               7px 0 5px #181818,
-               5px -5px 0 #181818,
-               7px -7px 5px #181818,
-               0 5px 0 #181818,
-               0 7px 5px #181818,
-               -5px 5px 0 #181818,
-               -7px 7px 0 #181818,
-               0 -5px 0 #181818,
-               0 -7px 5px #181818,
-               -5px -5px 0 #181818,
-               -7px -7px 5px #181818,
-               -5px 0 0 #181818,
-               -7px 0 5px #181818;
 }
 
 .title h1 {
