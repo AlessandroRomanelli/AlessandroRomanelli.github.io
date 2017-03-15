@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "GZA";
+  src: url(../media/fonts/gza-seminegra-webfont.ttf);
+}
+
+@font-face {
+  font-family: "Relative";
+  src: url(../media/fonts/Relative-Book.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-color: #181818;
+}
+
+canvas {
+  z-index: -1;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav {
+  font-family: "Relative";
+  position: relative;
+}
+
+.sidelink {
+  z-index: 100;
+  top: 50%;
+  position: fixed;
+  transform: rotate(270deg);
+}
+
+.sidelink a:link,
+.sidelink a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: #868686;
+  transition: .5s;
+  letter-spacing: 3px;
+  font-size: 11px;
+}
+
+.sidelink a:hover {
+  color: #fff;
+  text-shadow: 0 0 7px rgba(255, 255, 255, .33);
+}
+
+.nav-left {
+  left: 1%;
+  -webkit-transform-origin: 50%  50%;
+
+}
+
+.nav-right {
+  right: -2%;
+  -webkit-transform-origin: 50%  55%;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: default;
+  text-shadow: 5px 5px 0 #181818,
+               7px 7px 5px #181818,
+               5px 0 0 #181818,
+               7px 0 5px #181818,
+               5px -5px 0 #181818,
+               7px -7px 5px #181818,
+               0 5px 0 #181818,
+               0 7px 5px #181818,
+               -5px 5px 0 #181818,
+               -7px 7px 0 #181818,
+               0 -5px 0 #181818,
+               0 -7px 5px #181818,
+               -5px -5px 0 #181818,
+               -7px -7px 5px #181818,
+               -5px 0 0 #181818,
+               -7px 0 5px #181818;
+}
+
+.title h1 {
+  font-family: "GZA";
+  margin: 0;
+  line-height: 68px;
+  font-size: 55px;
+  letter-spacing: 3px;
+}
+
+.title span {
+  font-size: 12px;
+  font-family: "Relative";
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
