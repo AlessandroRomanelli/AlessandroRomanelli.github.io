@@ -21,7 +21,7 @@
     	ctx.translate(canvasWidth/2,canvasHeight/2);
     	for (var i = 0; i < 25; i++) {
     		for (var a = -45; a <= 45; a+=often) {
-    			setTimeout("drawTimeout("+a+");",25 * timeout);
+    			setTimeout("drawTimeout("+a+");",25/* * timeout*/);
     			timeout++;
     		}
     	}

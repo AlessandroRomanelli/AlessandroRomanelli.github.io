@@ -1,89 +1,145 @@
 @font-face {
-  font-family: "GZA";
-  src: url(../media/fonts/gza-seminegra-webfont.ttf);
+  font-family : "GZA";
+  src         : url(../media/fonts/gza-seminegra-webfont.ttf);
 }
 
 @font-face {
-  font-family: "Relative";
-  src: url(../media/fonts/Relative-Book.ttf);
+  font-family : "Relative";
+  src         : url(../media/fonts/Relative-Book.ttf);
 }
 
 * {
-  box-sizing: border-box;
-  color: white;
+  box-sizing : border-box;
+  color      : white;
 }
 
 body {
-  background-color: #181818;
+  background-color : #181818;
 }
 
 canvas {
-  z-index: -1;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  z-index   : -1;
+  display   : block;
+  position  : absolute;
+  top       : 50%;
+  left      : 50%;
+  transform : translate(-50%, -50%);
+}
+
+a:link,
+a:visited {
+  text-decoration : none;
 }
 
 .nav {
-  font-family: "Relative";
-  position: relative;
+  position    : relative;
+  font-family : "Relative";
 }
 
 .sidelink {
-  z-index: 100;
-  top: 50%;
-  position: fixed;
-  transform: rotate(270deg);
+  z-index   : 100;
+  position  : fixed;
+  top       : 50%;
+  transform : rotate(270deg);
 }
 
 .sidelink a:link,
 .sidelink a:visited {
-  font-weight: bold;
-  text-decoration: none;
-  color: #868686;
-  transition: .5s;
-  letter-spacing: 3px;
-  font-size: 11px;
+  color           : #868686;
+  text-decoration : none;
+  font-size       : 11px;
+  font-weight     : bold;
+  letter-spacing  : 3px;
+  transition      : .5s;
 }
 
 .sidelink a:hover {
-  color: #fff;
-  text-shadow: 0 0 7px rgba(255, 255, 255, .33);
+  color       : #fff;
+  text-shadow : 0 0 7px rgba(255, 255, 255, .33);
 }
 
 .nav-left {
-  left: 1%;
-  -webkit-transform-origin: 50%  50%;
-
+  left                     : 1%;
+  -webkit-transform-origin : 50% 50%;
 }
 
 .nav-right {
-  right: -2%;
-  -webkit-transform-origin: 50%  55%;
+  right                    : -2%;
+  -webkit-transform-origin : 50% 55%;
 }
 
+.my-projects,
 .title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  cursor: default;
+  z-index    : 100;
+  position   : absolute;
+  top        : 50%;
+  left       : 50%;
+  text-align : center;
+  transform  : translate(-50%, -50%);
+  cursor     : default;
 }
 
 .title h1 {
-  font-family: "GZA";
-  margin: 0;
-  line-height: 68px;
-  font-size: 55px;
-  letter-spacing: 3px;
+  margin         : 0;
+  font-family    : "GZA";
+  font-size      : 55px;
+  line-height    : 68px;
+  letter-spacing : 3px;
 }
 
+.my-projects a,
 .title span {
-  font-size: 12px;
-  font-family: "Relative";
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  text-transform : uppercase;
+  font-family    : "Relative";
+  font-size      : 12px;
+  letter-spacing : 10px;
+}
+
+.my-projects {
+  top        : 66%;
+  transition : .5s;
+}
+
+.my-projects a {
+  display        : relative;
+  display        : inline-block;
+  letter-spacing : 3px;
+  transition     : .5s ease-in-out;
+}
+
+.my-projects a::before {
+  z-index: 100;
+  content: '';
+  display    : block;
+  position   : absolute;
+  bottom:    -3px;
+  right      : 0;
+  width      : 0;
+  height: 1px;
+  background : transparent;
+  transition : width 1s ease,
+               background-color .5s ease;
+}
+
+.my-projects a::after {
+  z-index    : 100;
+  content    : '';
+  display    : block;
+  position   : relative;
+  top        : 5px;
+  width      : 0;
+  height     : 1px;
+  background : transparent;
+  transition : width 1s ease,
+               background-color .5s ease;
+}
+
+.my-projects a:hover::after {
+  width      : 100%;
+  background : white;
+}
+
+.my-projects a:hover::before {
+  width      : 100%;
+  background : white;
 }
