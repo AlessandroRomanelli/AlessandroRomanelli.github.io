@@ -11,7 +11,7 @@
   function init(){
   	if (location.hash)
   	canvas = $("canvas")[0];
-  	ctx = canvas.getContext("2d");
+  	ctx = $("canvas")[0].getContext("2d");
   	drawLines();
   }
 
