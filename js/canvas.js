@@ -2,12 +2,11 @@
   var ctx;
   var canvasWidth = $("canvas").width();
   var canvasHeight = $("canvas").height();
-  var color;
   var count = 0;
 
   var circleR = canvasWidth/2;
   var timeout = 0;
-  var often = .01;
+  var often = 3;
 
   function init(){
   	if (location.hash)
@@ -22,7 +21,7 @@
     	ctx.translate(canvasWidth/2,canvasHeight/2);
     	for (var i = 0; i < 25; i++) {
     		for (var a = -45; a <= 45; a+=often) {
-    			setTimeout("drawTimeout("+a+");",1 * timeout);
+    			setTimeout("drawTimeout("+a+");",100 * timeout);
     			timeout++;
     		}
     	}
@@ -46,7 +45,7 @@
   		ctx.strokeStyle= "rgb(200,200,200)";
   		ctx.lineWidth=1;
   	} else if (a == 0) {
-  		ctx.strokeStyle="rgb(120,120,120)";
+  		ctx.strokeStyle="rgb(90,90,90)";
   		ctx.lineWidth=0.5;
   	} else {
   		ctx.strokeStyle= changeColor(40, 80, Math.PI/4, 0, Math.PI/(2/3), Math.PI);

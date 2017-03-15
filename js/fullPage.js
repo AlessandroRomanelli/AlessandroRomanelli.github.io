@@ -10,5 +10,5 @@ $(document).ready(function(){
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
   });
-  $(window).load(init());
+  init();
 });
