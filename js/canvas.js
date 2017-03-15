@@ -10,7 +10,7 @@
 
   function init(){
   	if (location.hash)
-  	canvas = document.getElementById("canvas");
+  	canvas = $("canvas")[0];
   	ctx = canvas.getContext("2d");
   	drawLines();
   }
