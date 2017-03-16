@@ -10,5 +10,8 @@ $(document).ready(function(){
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
   });
-  init();
+  setTimeout(function() {
+    init("#canvas1", 25);
+    $(".sidelink").fadeIn(1000);
+  },2500);
 });
