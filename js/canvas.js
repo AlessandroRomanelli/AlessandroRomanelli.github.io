@@ -8,22 +8,26 @@
   var timeout = 0;
   var often = 5;
 
-  function init(canvasID, iterations){
+  function init(canvasID, iterations, useTimeout, time){
   	canvas = $(canvasID)[0];
   	ctx = $(canvasID)[0].getContext("2d");
     canvasWidth = $(canvasID).width();
     canvasHeight = $(canvasID).height();
-  	drawLines(iterations);
+  	drawLines(iterations, useTimeout, time);
   }
 
-    function drawLines(iterations) {
+    function drawLines(iterations, useTimeout, time) {
       ctx.fillStyle="transparent";
     	ctx.fillRect(0,0,canvasWidth,canvasHeight);
     	ctx.translate(canvasWidth/2,canvasHeight/2);
     	for (var i = 0; i < iterations; i++) {
     		for (var a = -45; a <= 45; a+=often) {
-    			setTimeout("drawTimeout("+a+");",25*timeout);
-    			timeout++;
+          if (useTimeout) {
+      			setTimeout("drawTimeout("+a+");",time*timeout);
+      			timeout++;
+          } else {
+            setTimeout("drawTimeout("+a+");",time*timeout);
+          }
     		}
     	}
     }

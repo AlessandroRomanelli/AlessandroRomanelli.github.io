@@ -16,7 +16,7 @@ body {
   background-color : #181818;
 }
 
-canvas {
+.main canvas {
   z-index   : -1;
   display   : block;
   position  : absolute;
@@ -26,6 +26,17 @@ canvas {
   transform : translate(-50%, -50%) translateZ(0);
 }
 
+.about canvas {
+  z-index   : -1;
+  display   : block;
+  position  : absolute;
+  top       : 50%;
+  left      : 15%;
+  backface-visibility: hidden;
+  transform : translate(-50%, -50%) translateZ(0);
+  opacity: .25;
+}
+
 a:link,
 a:visited {
   text-decoration : none;
@@ -33,6 +44,10 @@ a:visited {
 
 .section {
   color: white;
+}
+
+.slide {
+  position: relative;
 }
 
 .nav {
@@ -148,6 +163,7 @@ a:visited {
 
 .my-projects a,
 .title span {
+  text-decoration: none;
   text-transform : uppercase;
   font-family    : "Relative";
   font-size      : 12px;
@@ -166,9 +182,9 @@ a:visited {
   display        : inline-block;
   letter-spacing : 3px;
   transition     : .5s ease-in-out;
-  -webkit-animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 17s both;
-  -moz-animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 17s both;
-  animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 17s both;
+  -webkit-animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+  -moz-animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+  animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
 }
 
 .my-projects a::before {
@@ -284,4 +300,133 @@ a svg:hover #Skype {
   display: inline-block;
   width: 50px;
   height: 50px;
+}
+
+.slide.about {
+  background: linear-gradient(90deg, rgba(0,0,0,.75) -50%, transparent 105%);
+}
+
+.about-content {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.about-content h1::first-line {
+  font-size      : 50px;
+  letter-spacing : 3px;
+}
+
+.about-content h1{
+  text-align: left;
+  margin         : 0;
+  font-family    : "GZA";
+  font-size      : 30px;
+  letter-spacing : 3px;
+  line-height    : 55px;
+}
+
+.about-content a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.about-content a:hover {
+  color: white;
+  text-shadow : 0 0 7px rgba(255, 255, 255, .33);
+}
+
+.about-content p {
+  margin-left: 10px;
+  font-family: "Relative";
+  font-size: 16px;
+  color: rgb(150,150,150);
+  line-height: 25px;
+}
+
+.skills {
+  width: 500px;
+  text-align: center;
+  font-family: "Relative";
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.skills ul {
+  -webkit-padding-start: 0;
+}
+
+.skills li {
+  color: white;
+  display: inline-block;
+  list-style: none;
+  padding: 5px 10px;
+  margin-right: 20px;
+  border-radius: 10px;
+  cursor: default;
+}
+
+.skills li:nth-child(1) {
+  background-color: #c2bb59;
+}
+
+.skills li:nth-child(2) {
+  background-color: #c25975;
+}
+
+.skills li:nth-child(3) {
+  background-color: #3079ab;
+}
+
+.skills li:nth-child(4) {
+  background-color: #39add1;
+  margin-right: 0;
+}
+
+.progressbar {
+  display: block;
+  width: 500px;
+  height: 8px;
+  border-radius: 5px;
+}
+
+.badges {
+  width: 500px;
+  height: 50px;
+}
+
+.skillbar {
+  float: left;
+  top: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.first-skill {
+  border-radius: 5px 0 0 5px;
+  width: 45%;
+  height: 8px;
+  background-color: #c2bb59;
+}
+
+.second-skill {
+  width: 25%;
+  height: 8px;
+  background-color: #c25975;
+}
+
+.third-skill {
+  width: 20%;
+  height: 8px;
+  background-color: #3079ab;
+}
+
+.fourth-skill {
+  width: 10%;
+  height: 8px;
+  background-color: #39add1;
+  border-radius: 0 5px 5px 0;
 }
