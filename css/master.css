@@ -214,11 +214,10 @@ a:visited {
 }
 
 .icon {
-  padding: 15px;
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background-color: rgb(60,60,60);
   transition: .5s;
@@ -238,7 +237,7 @@ a svg #facebook,
 a svg #google1,
 a svg #google2,
 a svg #Skype {
-  transition: .25s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 a svg:hover #facebook,
@@ -261,11 +260,12 @@ a svg:hover #Skype {
 }
 
 .icon svg {
+  padding: 15px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
 }
