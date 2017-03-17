@@ -10,6 +10,7 @@ $(document).ready(function(){
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
     controlArrows: false,
+    interlockedSlides: true,
     keyboardScrolling: false
   });
   if (localStorage.getItem("hasCodeRunBefore") === null) {
@@ -41,7 +42,7 @@ $(document).ready(function(){
       var mainFromR = "<a href='#firstPage/slide2'>&#9651;</a>";
       $(".sidelink").fadeOut();
       if ($(this).hasClass("text-l")) {
-        init("#canvas2", 3, true, 150);
+        init("#canvas2", 3, true, 250);
       }
       setTimeout(function(clicked){
         if (clicked.hasClass("text-l")) {

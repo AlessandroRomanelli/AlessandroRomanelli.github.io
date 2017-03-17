@@ -332,6 +332,7 @@ a svg:hover #Skype {
   text-decoration: none;
   color: inherit;
   font-weight: bold;
+  transition: .5s;
 }
 
 .about-content a:hover {
@@ -370,27 +371,33 @@ a svg:hover #Skype {
 }
 
 .skills li:nth-child(1) {
-  background-color: #c2bb59;
+  background-color: #9c8e00;
 }
 
 .skills li:nth-child(2) {
-  background-color: #c25975;
+  background-color: #dc1c4f;
 }
 
 .skills li:nth-child(3) {
-  background-color: #3079ab;
+  background-color: #0074c3;
 }
 
 .skills li:nth-child(4) {
-  background-color: #39add1;
+  background-color: #22a68c;
+}
+
+.skills li:nth-child(5) {
+  background-color: #404040;
   margin-right: 0;
 }
 
 .progressbar {
   display: block;
   width: 500px;
-  height: 8px;
+  height: 10px;
   border-radius: 5px;
+  background-color: #404040;
+  border: 1px solid rgb(160,160,160);
 }
 
 .badges {
@@ -407,26 +414,25 @@ a svg:hover #Skype {
 
 .first-skill {
   border-radius: 5px 0 0 5px;
-  width: 45%;
+  width: 50%;
   height: 8px;
-  background-color: #c2bb59;
+  background-color: #9c8e00;
 }
 
 .second-skill {
   width: 25%;
   height: 8px;
-  background-color: #c25975;
+  background-color: #dc1c4f;
 }
 
 .third-skill {
-  width: 20%;
+  width: 12%;
   height: 8px;
-  background-color: #3079ab;
+  background-color: #0074c3;
 }
 
 .fourth-skill {
-  width: 10%;
+  width: 6%;
   height: 8px;
-  background-color: #39add1;
-  border-radius: 0 5px 5px 0;
+  background-color: #22a68c;
 }
