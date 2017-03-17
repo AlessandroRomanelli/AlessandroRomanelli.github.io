@@ -22,7 +22,8 @@ canvas {
   position  : absolute;
   top       : 50%;
   left      : 50%;
-  transform : translate(-50%, -50%);
+  backface-visibility: hidden;
+  transform : translate(-50%, -50%) translateZ(0);
 }
 
 a:link,
@@ -72,14 +73,28 @@ a:visited {
   -webkit-transform-origin : 50% 55%;
 }
 
+.arrow-r {
+  right: 25px;
+}
+
+.arrow-l {
+  left: 25px;
+}
+
+.arrow a:link {
+  font-size: 20px;
+}
+
 .my-projects,
 .title {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
   z-index    : 100;
   position   : absolute;
   top        : 50%;
   left       : 50%;
   text-align : center;
-  transform  : translate(-50%, -50%);
+  transform  : translate(-50%, -50%) translateZ(0);
   cursor     : default;
 }
 
@@ -140,8 +155,9 @@ a:visited {
 }
 
 .my-projects {
-  top        : 66%;
+  top        : 0;
   transition : .5s;
+  margin-top: 200px;
 }
 
 .my-projects a {

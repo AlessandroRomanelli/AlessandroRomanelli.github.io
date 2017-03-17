@@ -12,25 +12,31 @@
     <div class="nav">
       <div class="social-media">
       </div>
-      <div class="mail-wrapper nav-right sidelink">
-        <a href="#">aleromrod@gmail.com</a>
+      <div class="mail-wrapper nav-right text-r sidelink">
+        <a href="#firstPage/slide3">aleromrod@gmail.com</a>
       </div>
-      <div class="about-wrapper nav-left sidelink">
-        <a href="#">About</a>
+      <div class="about-wrapper nav-left text-l sidelink">
+        <a href="#firstPage/slide1">About</a>
       </div>
     </div>
     <div id="fullpage">
       <div class="section">
-        <canvas id="canvas1" class="common-canvas" width="900" height="900"></canvas>
-        <div class="title">
-          <h1>Alessandro Romanelli</h1>
-          <span>Freelancer Web Developer</span>
+        <div class="slide" data-anchor="slide1">
+
         </div>
-      </div>
-      <div class="my-projects">
-        <a href="#">Check out my projects</a>
-      </div>
-      <div class="section">
+        <div class="slide active" data-anchor="slide2">
+          <canvas id="canvas1" class="common-canvas" width="900" height="900"></canvas>
+          <div class="title">
+            <h1>Alessandro Romanelli</h1>
+            <span>Freelancer Web Developer</span>
+            <div class="my-projects">
+              <a href="#">Check out my projects</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide" data-anchor="slide3">
+
+        </div>
       </div>
     </div>
     <script
