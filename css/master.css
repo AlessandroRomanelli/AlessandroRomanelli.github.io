@@ -10,7 +10,6 @@
 
 * {
   box-sizing : border-box;
-  color      : white;
 }
 
 body {
@@ -29,6 +28,10 @@ canvas {
 a:link,
 a:visited {
   text-decoration : none;
+}
+
+.section {
+  color: white;
 }
 
 .nav {
@@ -80,6 +83,37 @@ a:visited {
   cursor     : default;
 }
 
+.invert {
+  color: #181818;
+  -webkit-animation: fade-in 1s ease-out both;
+	-moz-animation: fade-in 1s ease-out both;
+	animation: fade-in 1s ease-out both;
+  transition: all 1s ease;
+}
+
+.invert::before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 638px;
+  width: 638px;
+  background-color: rgb(200,200,200);
+}
+
+.invert::after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 625px;
+  width: 625px;
+  border: 1px solid #181818;
+}
+
 .title h1 {
   margin         : 0;
   font-family    : "GZA";
@@ -111,13 +145,14 @@ a:visited {
 }
 
 .my-projects a {
+  color: white;
   display        : relative;
   display        : inline-block;
   letter-spacing : 3px;
   transition     : .5s ease-in-out;
-  -webkit-animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
-  -moz-animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
-  animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+  -webkit-animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 17s both;
+  -moz-animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 17s both;
+  animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 17s both;
 }
 
 .my-projects a::before {
@@ -155,4 +190,54 @@ a:visited {
 .my-projects a:hover::before {
   width      : 100%;
   background : white;
+}
+
+.my-inverted a {
+  color: #181818
+}
+
+.my-inverted a:hover::after {
+  background: #181818;
+}
+
+.my-inverted a:hover::before {
+  background: #181818;
+}
+
+.social-media {
+  display: inline-block;
+  z-index: 1000000;
+  position: absolute;
+  right: 0;
+  margin: 25px 50px 0 auto;
+  height: 50px;
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgb(60,60,60);
+  transition: .5s;
+}
+
+.icon:hover {
+  background: white;
+}
+
+.icon:not(first-child) {
+  margin-right: 20px;
+}
+
+.icon svg,
+#Capa_1 svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
 }

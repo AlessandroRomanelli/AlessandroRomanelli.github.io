@@ -4,11 +4,7 @@
  * T: @cssanimista
  * ---------------------------------------------- */
 
-/**
- * ----------------------------------------
- * animation bg-pan-right
- * ----------------------------------------
- */
+/* H1 */
  @-webkit-keyframes text-focus-in {
    0% {
      -webkit-filter: blur(12px);
@@ -34,6 +30,7 @@
    }
  }
 
+/*SPAN*/
  @-webkit-keyframes tracking-in-expand {
    0% {
      letter-spacing: -0.5em;
@@ -59,6 +56,7 @@
    }
  }
 
+/*PROJECTS*/
  @-webkit-keyframes slide-in-fwd-top {
   0% {
     -webkit-transform: translateZ(-1400px) translateY(-100px);
@@ -80,6 +78,24 @@
   100% {
     -webkit-transform: translateZ(0) translateY(0);
             transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
