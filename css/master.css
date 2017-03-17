@@ -31,7 +31,7 @@ a:visited {
 }
 
 .section {
-  color : white;
+  color: white;
 }
 
 .nav {
@@ -40,8 +40,8 @@ a:visited {
 }
 
 .sidelink {
+  display: none;
   z-index   : 100;
-  display   : none;
   position  : fixed;
   top       : 50%;
   transform : rotate(270deg);
@@ -84,51 +84,51 @@ a:visited {
 }
 
 .invert {
-  color             : #181818;
-  -moz-animation    : fade-in 1s ease-out both;
-  -webkit-animation : fade-in 1s ease-out both;
-  animation         : fade-in 1s ease-out both;
-  transition        : all 1s ease;
+  color: #181818;
+  -webkit-animation: fade-in 1s ease-out both;
+	-moz-animation: fade-in 1s ease-out both;
+	animation: fade-in 1s ease-out both;
+  transition: all 1s ease;
 }
 
 .invert::before {
-  z-index          : 0;
-  content          : "";
-  position         : absolute;
-  top              : 50%;
-  width            : 638px;
-  height           : 638px;
-  background-color : rgb(200,200,200);
-  transform        : translate(-50%,-50%);
+  z-index: 0;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 638px;
+  width: 638px;
+  background-color: rgb(200,200,200);
 }
 
 .invert::after {
-  z-index   : 1;
-  content   : "";
-  position  : absolute;
-  top       : 50%;
-  left      : 50%;
-  width     : 625px;
-  height    : 625px;
-  border    : 1px solid #181818;
-  transform : translate(-50%,-50%);
+  z-index: 1;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 625px;
+  width: 625px;
+  border: 1px solid #181818;
 }
 
 .title h1 {
-  margin            : 0;
-  font-family       : "GZA";
-  font-size         : 50px;
-  line-height       : 55px;
-  letter-spacing    : 3px;
-  -moz-animation    : text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) .5s both;
-  -webkit-animation : text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) .5s both;
-  animation         : text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) .5s both;
+  margin         : 0;
+  font-family    : "GZA";
+  font-size      : 50px;
+  line-height    : 55px;
+  letter-spacing : 3px;
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) .5s both;
+	-moz-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) .5s both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) .5s both;
 }
 
 .title span {
-  -moz-animation    : tracking-in-expand 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s both;
-  -webkit-animation : tracking-in-expand 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s both;
-  animation         : tracking-in-expand 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s both;
+  -webkit-animation: tracking-in-expand 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s both;
+	-moz-animation: tracking-in-expand 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s both;
+	animation: tracking-in-expand 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s both;
 }
 
 .my-projects a,
@@ -145,25 +145,25 @@ a:visited {
 }
 
 .my-projects a {
-  display           : relative;
-  display           : inline-block;
-  color             : white;
-  letter-spacing    : 3px;
-  -moz-animation    : slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 17s both;
-  -webkit-animation : slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 17s both;
-  animation         : slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 17s both;
-  transition        : .5s ease-in-out;
+  color: white;
+  display        : relative;
+  display        : inline-block;
+  letter-spacing : 3px;
+  transition     : .5s ease-in-out;
+  -webkit-animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 17s both;
+  -moz-animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 17s both;
+  animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 17s both;
 }
 
 .my-projects a::before {
-  z-index    : 100;
-  content    : '';
+  z-index: 100;
+  content: '';
   display    : block;
   position   : absolute;
+  bottom:    -3px;
   right      : 0;
-  bottom     : -3px;
   width      : 0;
-  height     : 1px;
+  height: 1px;
   background : transparent;
   transition : width 1s ease,
                background-color .5s ease;
@@ -174,7 +174,7 @@ a:visited {
   content    : '';
   display    : block;
   position   : relative;
-  top        : 5px;
+  top        : 7px;
   width      : 0;
   height     : 1px;
   background : transparent;
@@ -193,51 +193,50 @@ a:visited {
 }
 
 .my-inverted a {
-  color : #181818;
+  color: #181818
 }
 
 .my-inverted a:hover::after {
-  background : #181818;
+  background: #181818;
 }
 
 .my-inverted a:hover::before {
-  background : #181818;
+  background: #181818;
 }
 
 .social-media {
-  z-index  : 1000000;
-  display  : inline-block;
-  position : absolute;
-  right    : 0;
-  height   : 50px;
-  margin   : 25px 50px 0 auto;
+  display: inline-block;
+  z-index: 1000000;
+  position: absolute;
+  right: 0;
+  margin: 25px 50px 0 auto;
+  height: 50px;
 }
 
 .icon {
-  display          : inline-block;
-  position         : relative;
-  width            : 35px;
-  height           : 35px;
-  border-radius    : 50%;
-  background-color : rgb(60,60,60);
-  transition       : .5s;
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgb(60,60,60);
+  transition: .5s;
 }
 
 .icon:hover {
-  background : white;
+  background: white;
 }
 
 .icon:not(first-child) {
-  margin-right : 20px;
+  margin-right: 20px;
 }
 
-
 .icon svg {
-  display   : inline-block;
-  position  : absolute;
-  top       : 50%;
-  left      : 50%;
-  width     : 20px;
-  height    : 20px;
-  transform : translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
 }
