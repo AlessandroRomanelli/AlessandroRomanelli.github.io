@@ -224,11 +224,39 @@ a:visited {
 }
 
 .icon:hover {
-  background: white;
+  -webkit-animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  -moz-animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 
 .icon:not(first-child) {
   margin-right: 20px;
+}
+
+a svg #facebook,
+a svg #google1,
+a svg #google2,
+a svg #Skype {
+  transition: .25s ease-in-out;
+}
+
+a svg:hover #facebook,
+a svg:hover #google1,
+a svg:hover #google2,
+a svg:hover #Skype {
+  fill: #fff;
+}
+
+.fb:hover {
+  background-color: #3B5998;
+}
+
+.google:hover {
+  background-color: #d62d20;
+}
+
+.skype:hover {
+  background-color: #12A5F4;
 }
 
 .icon svg {
