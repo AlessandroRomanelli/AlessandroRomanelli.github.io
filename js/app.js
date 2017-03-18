@@ -10,9 +10,10 @@ $(document).ready(function(){
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
     controlArrows: false,
-    interlockedSlides: true,
     keyboardScrolling: false
   });
+
+  //On first visit animation
   if (localStorage.getItem("hasCodeRunBefore") === null) {
     setTimeout(function() {
       init("#canvas1", 25, true, 25);
@@ -23,6 +24,7 @@ $(document).ready(function(){
         $(".my-projects").addClass("my-inverted");
       },12000);
     },3500);
+  //Normal animation
   } else {
     init("#canvas1", 25, false, 25);
     setTimeout(function(){
@@ -32,9 +34,10 @@ $(document).ready(function(){
     },3000);
 
   }
-
+    //SVG Social Media
     $(".social-media").load("svgstore.html");
 
+    //Animation of sidelinks
     $(".sidelink").click(function(){
       var about = "<a href='#firstPage/slide1'>About</a>";
       var mail = "<a href='#firstPage/slide3'>aleromrod@gmail.com</a>";
@@ -71,5 +74,43 @@ $(document).ready(function(){
           $(".sidelink").fadeIn();
         }
       }, 750, $(this))
+    });
+    $.getJSON("https://teamtreehouse.com/alessandroromanelli.json", function renderProgressbar(data) {
+      var points = data.points;
+
+      var sortable = [];
+      for (var skill in points) {
+        sortable.push([skill, points[skill]]);
+      };
+      sortable.sort(function(a,b){
+        return b[1] - a[1];
+      });
+      sortable = sortable.slice(1,5);
+
+      var skillsHTML = "<ul>";
+      $.each(sortable, function (index, skill) {
+        skillsHTML += "<li>"+skill[0]+"</li>";
+      });
+      skillsHTML += "<li>Others</li>";
+      skillsHTML += "</ul>";
+      $(".skills").append(skillsHTML);
+
+      function genPerc (x) {
+        return Math.round(x[1]/points.total*100);
+      };
+
+      var firstPerc = genPerc(sortable[0]);
+      var secondPerc = genPerc(sortable[1]);
+      var thirdPerc = genPerc(sortable[2]);
+      var fourthPerc = genPerc(sortable[3]);
+
+      $(".text-l").click(function(){
+        setTimeout(function(){
+          $(".first-skill").css("width", firstPerc+"%");
+          $(".second-skill").css("width", secondPerc+"%");
+          $(".third-skill").css("width", thirdPerc+"%");
+          $(".fourth-skill").css("width", fourthPerc+"%");
+        },750);
+      });
     });
 });
