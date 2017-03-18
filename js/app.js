@@ -82,7 +82,7 @@ $(document).ready(function(){
       $(".skills").append(skillsHTML);
 
       var latestBadges = [];
-      for (i=1; i < 5; i++) {
+      for (i=1; i < 9; i++) {
         latestBadges.push(data.badges[data.badges.length-i]);
       }
 
