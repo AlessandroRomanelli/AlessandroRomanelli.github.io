@@ -394,7 +394,7 @@ a svg:hover #Skype {
 }
 
 .skills li:nth-child(1) {
-  background-color: #9c8e00;
+  background-color: #b3a300;
 }
 
 .skills li:nth-child(2) {
@@ -427,6 +427,7 @@ a svg:hover #Skype {
   margin-top: 25px;
   width: 600px;
   height: 100px;
+  transform: .5s;
 }
 
 .badges a::after {
@@ -441,6 +442,24 @@ a svg:hover #Skype {
   display: inline-block;
   list-style: none;
   margin-right: 20px;
+  opacity: .75;
+  transition: .5s;
+}
+
+.badges li:nth-child(n+3) {
+  opacity: .5;
+}
+
+.badges li:nth-child(n+5) {
+  opacity: .2;
+}
+
+.badges li:nth-child(n+7) {
+  opacity: .05;
+}
+
+.badges li:hover {
+  opacity: 1;
 }
 
 .badge-img {
@@ -450,6 +469,7 @@ a svg:hover #Skype {
 }
 
 .badge-img:hover {
+  opacity: 1;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
@@ -466,7 +486,7 @@ a svg:hover #Skype {
   border-radius: 5px 0 0 5px;
   width: 0%;
   height: 8px;
-  background-color: #9c8e00;
+  background-color: #ffeb3b;
 }
 
 .second-skill {
