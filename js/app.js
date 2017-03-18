@@ -14,26 +14,14 @@ $(document).ready(function(){
   });
 
   //On first visit animation
-  if (localStorage.getItem("hasCodeRunBefore") === null) {
-    setTimeout(function() {
-      init("#canvas1", 25, true, 25);
-      setTimeout(function() {
-        localStorage.setItem("hasCodeRunBefore", true);
-        $(".sidelink").fadeIn(1000);
-        $(".title").addClass("invert");
-        $(".my-projects").addClass("my-inverted");
-      },12000);
-    },3500);
-  //Normal animation
-  } else {
     init("#canvas1", 25, false, 25);
     setTimeout(function(){
       $(".title").addClass("invert");
       $(".my-projects").addClass("my-inverted");
       $(".sidelink").fadeIn(1000);
-    },3000);
+      $(".about-content").show()
+    },2500);
 
-  }
     //SVG Social Media
     $(".social-media").load("svgstore.html");
 
@@ -77,7 +65,6 @@ $(document).ready(function(){
     });
     $.getJSON("https://teamtreehouse.com/alessandroromanelli.json", function renderProgressbar(data) {
       var points = data.points;
-
       var sortable = [];
       for (var skill in points) {
         sortable.push([skill, points[skill]]);
@@ -91,12 +78,31 @@ $(document).ready(function(){
       $.each(sortable, function (index, skill) {
         skillsHTML += "<li>"+skill[0]+"</li>";
       });
-      skillsHTML += "<li>Others</li>";
       skillsHTML += "</ul>";
       $(".skills").append(skillsHTML);
 
+      var latestBadges = [];
+      for (i=1; i < 5; i++) {
+        latestBadges.push(data.badges[data.badges.length-i]);
+      }
+
+      var badgesHTML = "<ul>";
+      $.each(latestBadges, function(index, badge) {
+        badgesHTML += "<li><a href="+badge.url+" target='_blank'>";
+        badgesHTML += "<img class='badge-img' src="+badge.icon_url+"></a></li>";
+      });
+      badgesHTML += "</ul>";
+      $(".badges").append(badgesHTML);
+
+      var delta = points.total;
+      for (var i=0; i < 4; i++) {
+        delta -= sortable[i][1];
+      }
+
+      var total = points.total - delta;
+
       function genPerc (x) {
-        return Math.round(x[1]/points.total*100);
+        return Math.round(x[1]/total*100);
       };
 
       var firstPerc = genPerc(sortable[0]);
