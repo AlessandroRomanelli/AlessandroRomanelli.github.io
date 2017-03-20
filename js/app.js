@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  //FullPage.js plugin settings
   $('#fullpage').fullpage({
     menu: '#menu',
     lockAnchors: false,
@@ -13,7 +14,7 @@ $(document).ready(function(){
     keyboardScrolling: false
   });
 
-  //On first visit animation
+  //==================================== ANIMATION
     init("#canvas1", 25, false, 25);
     setTimeout(function(){
       $(".title").addClass("invert");
@@ -22,9 +23,10 @@ $(document).ready(function(){
       $(".about-content").show()
     },2500);
 
-    //SVG Social Media
+  //==================================== SVG LOADING
     $(".social-media").load("svgstore.html");
 
+    //================================== SIDELINK INTERACTIVITY
     //Animation of sidelinks
     $(".sidelink").click(function(){
       var about = "<a href='#firstPage/slide1'>About</a>";
@@ -63,6 +65,9 @@ $(document).ready(function(){
         }
       }, 750, $(this))
     });
+
+      //==================================== ABOUT PROFILE JSON
+
     $.getJSON("https://teamtreehouse.com/alessandroromanelli.json", function renderProgressbar(data) {
       var points = data.points;
       var sortable = [];
@@ -118,5 +123,15 @@ $(document).ready(function(){
           $(".fourth-skill").css("width", fourthPerc+"%");
         },750);
       });
-    });
-});
+    }); //END .getJSON
+
+    $.get("https://ipinfo.io", function (response) {
+      let country = response.country;
+      $.get("greetings.xml", function(xml) {
+        let greeting = xml.getElementsByTagName(country)[0].childNodes[1].childNodes[0].nodeValue;
+        console.log(greeting);
+        $(".about-content h1:first").text(greeting);
+      }, "xml");
+    }, "jsonp");
+
+}); //END Doc.ready
