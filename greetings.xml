@@ -1,0 +1,157 @@
+<greetings>
+  <FR>
+    <greeting>Bonjour, </greeting>
+  </FR>
+
+  <DE>
+    <greeting>Guten Tag, </greeting>
+  </DE>
+
+  <IT>
+    <greeting>Buongiorno, </greeting>
+  </IT>
+
+  <CZ>
+    <greeting>Ahoj, </greeting>
+  </CZ>
+
+  <GR>
+    <greeting>Yah sahs, </greeting>
+  </GR>
+
+  <HR>
+    <greeting>Bog, </greeting>
+  </HR>
+
+  <NL>
+    <greeting>Goededag, </greeting>
+  </NL>
+
+  <HU>
+    <greeting>Üdvözlöm, </greeting>
+  </HU>
+
+  <PL>
+    <greeting>Dzien' dobry, </greeting>
+  </PL>
+
+  <SE>
+    <greeting>Hej, </greeting>
+  </SE>
+
+  <MX>
+    <greeting>Buenos días, </greeting>
+  </MX>
+
+  <CN>
+    <greeting>Nĭ hăo, </greeting>
+  </CN>
+
+  <JP>
+    <greeting>Kon-nichiwa, </greeting>
+  </JP>
+
+  <KR>
+    <greeting>An-nyong Ha-se-yo, </greeting>
+  </KR>
+
+  <IL>
+    <greeting>Shalom, </greeting>
+  </IL>
+
+  <TR>
+    <greeting>Merhaba, </greeting>
+  </TR>
+
+  <RU>
+    <greeting>Zdravstvuyte, </greeting>
+  </RU>
+
+  <ES>
+    <greeting>Hola, </greeting>
+  </ES>
+
+  <BE>
+    <greeting>Bonjour, </greeting>
+  </BE>
+
+  <PT>
+    <greeting>Olá, </greeting>
+  </PT>
+
+  <CH>
+    <greeting>Grützi, </greeting>
+  </CH>
+
+  <GB>
+    <greeting>Greetings, </greeting>
+  </GB>
+
+  <US>
+    <greeting>Hey, </greeting>
+  </US>
+
+  <IE>
+    <greeting>Dia dhuit, </greeting>
+  </IE>
+
+  <DK>
+    <greeting>Goddag, </greeting>
+  </DK>
+
+  <NO>
+    <greeting>Hallo, </greeting>
+  </NO>
+
+  <FI>
+    <greeting>Hei, </greeting>
+  </FI>
+
+  <AT>
+    <greeting>Guten Tag, </greeting>
+  </AT>
+
+  <BG>
+    <greeting>Zdravejte, </greeting>
+  </BG>
+
+  <RO>
+    <greeting>Bună Ziua, </greeting>
+  </RO>
+
+  <UA>
+    <greeting>Vitayu, </greeting>
+  </UA>
+
+  <BY>
+    <greeting>Pryvitańnie, </greeting>
+  </BY>
+
+  <HU>
+    <greeting>Szervusz, </greeting>
+  </HU>
+
+  <SK>
+    <greeting>Ahoj, </greeting>
+  </SK>
+
+  <SI>
+    <greeting>Pozdravljeni, </greeting>
+  </SI>
+
+  <LT>
+    <greeting>Labas, </greeting>
+  </LT>
+
+  <EE>
+    <greeting>Tervist, </greeting>
+  </EE>
+
+  <LV>
+    <greeting>Sveiki, </greeting>
+  </LV>
+
+  <AU>
+    <greeting>G'day mate, </greeting>
+  </AU>
+</greetings>
