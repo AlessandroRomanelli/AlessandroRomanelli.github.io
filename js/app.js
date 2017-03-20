@@ -115,14 +115,16 @@ $(document).ready(function(){
       var thirdPerc = genPerc(sortable[2]);
       var fourthPerc = genPerc(sortable[3]);
 
-      $(".text-l").click(function(){
-        setTimeout(function(){
-          $(".first-skill").css("width", firstPerc+"%");
-          $(".second-skill").css("width", secondPerc+"%");
-          $(".third-skill").css("width", thirdPerc+"%");
-          $(".fourth-skill").css("width", fourthPerc+"%");
-        },750);
-      });
+      window.onhashchange = function(){
+        if (location.hash === "#firstPage") {
+          setTimeout(function(){
+            $(".first-skill").css("width", firstPerc+"%");
+            $(".second-skill").css("width", secondPerc+"%");
+            $(".third-skill").css("width", thirdPerc+"%");
+            $(".fourth-skill").css("width", fourthPerc+"%");
+          },750);
+        };
+      };
     }); //END .getJSON
 
     $.get("https://ipinfo.io", function (response) {
