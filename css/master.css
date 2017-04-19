@@ -105,12 +105,13 @@ a:visited {
   backface-visibility: hidden;
   -webkit-font-smoothing: subpixel-antialiased;
   z-index    : 100;
-  position   : absolute;
-  top        : 50%;
-  left       : 50%;
   text-align : center;
-  transform  : translate(-50%, -50%) translateZ(0);
   cursor     : default;
+}
+
+.title-content {
+  position: relative;
+  bottom: -50px;
 }
 
 .invert {
@@ -163,6 +164,7 @@ a:visited {
 
 .my-projects a,
 .title span {
+  z-index: 1000;
   text-decoration: none;
   text-transform : uppercase;
   font-family    : "Relative";
@@ -173,12 +175,12 @@ a:visited {
 .my-projects {
   top        : 0;
   transition : .5s;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .my-projects a {
   color: white;
-  display        : relative;
+  position        : relative;
   display        : inline-block;
   letter-spacing : 3px;
   transition     : .5s ease-in-out;
@@ -310,11 +312,11 @@ a svg:hover #Skype {
   display: none;
   width: 50%;
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 10%;
-  transform: translateY(-50%) translateZ(0);
+  transform: translateZ(0);
   -webkit-backface-visibility: hidden;
-  -webkit-transform: translateY(-50%) translateZ(0) scale(1.0, 1.0);
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
 
 .about-content h1:first-of-type {
@@ -506,4 +508,9 @@ a svg:hover #Skype {
   height: 8px;
   background-color: #00c5d6;
   border-radius: 0 5px 5px 0;
+}
+
+.about-footer {
+  position: relative;
+  bottom: 0;
 }
