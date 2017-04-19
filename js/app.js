@@ -36,6 +36,8 @@ $(document).ready(function(){
       $(".sidelink").fadeOut();
       if ($(this).hasClass("text-l")) {
         init("#canvas2", 3, true, 250);
+      } else if ($(this).hasClass("text-r")) {
+        init("#canvas3", 3, true, 250);
       }
       setTimeout(function(clicked){
         if (clicked.hasClass("text-l")) {
@@ -145,4 +147,10 @@ $(document).ready(function(){
       }, "xml");
     }, "jsonp");
 
+    $(".block").children().focus(function(){
+      $(this).parent().addClass("focussed");
+    })
+    $(".block").children().blur(function(){
+      $(this).parent().removeClass("focussed");
+    })
 }); //END Doc.ready
