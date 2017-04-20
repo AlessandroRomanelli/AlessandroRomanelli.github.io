@@ -158,6 +158,7 @@ body {
   font-family: "Relative";
   letter-spacing: 2px;
   height: 50px;
+  transition: .25s ease-in-out;
 }
 
 .form button:hover {
@@ -167,7 +168,7 @@ body {
 
 
 #reset-button {
-  background-color: #e76750;
+  background-color: #321f1c;
 }
 
 #reset-button:hover {
@@ -175,7 +176,7 @@ body {
 }
 
 #submit-button {
-  background-color: #41c268;
+  background-color: #223527;
 }
 
 #submit-button:hover {
